@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-list',
   templateUrl: './page-list.component.html',
-  styleUrls: ['./page-list.component.css']
+  styleUrls: ['./page-list.component.css'],
 })
-export class PageListComponent {
+export class PageListComponent implements OnInit {
+  @Input() pages = [];
 
+  constructor() {}
+  ngOnInit(): void {}
 }
