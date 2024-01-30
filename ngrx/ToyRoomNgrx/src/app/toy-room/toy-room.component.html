@@ -1,0 +1,12 @@
+<!-- toy-room.component.html -->
+<div>
+  <h2>Toy Room</h2>
+  <button (click)="addNewToy()">Add New Toy</button>
+
+  <ul>
+    <li *ngFor="let toy of toys$ | async">
+      {{ toy.name }}
+      <button (click)="removeToy(toy.id)">Remove</button>
+    </li>
+  </ul>
+</div>
